@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool uniqueOccurrences(vector<int>& arr) {
+        map<int,int>mp;
+        for(auto it:arr)
+        {
+            mp[it]++;
+        }
+        map<int,int>s;
+        for(auto it:mp)
+        {
+          s[it.second]=it.first;
+        }
+        if(s.size()==mp.size())
+        {
+            return true;
+        }
+        return false;
+
+    }
+};
